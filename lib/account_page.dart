@@ -6,8 +6,8 @@ class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
 
   Future<bool> _isGuest() async {
-    // Simulate guest check logic
-    return true; // Assume user is a guest for simulation
+    
+    return true; 
 
   }
 

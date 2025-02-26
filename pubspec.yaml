@@ -11,10 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   crypto: ^3.0.1
-
-  sqflite: ^2.4.1 # Add sqflite dependency for database operations
-  sqflite_common_ffi: ^2.3.4 # Add sqflite_common_ffi for FFI support
-
+  sqflite: ^2.4.1
+  sqflite_common_ffi: ^2.3.4
   characters: ^1.3.0
 
 dev_dependencies:
@@ -24,9 +22,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/welcaompage.jpg
+    - assets/welcampage.jpg
     - assets/back.png
-    - assets/background.jpg
     - assets/event.png
     - assets/home.png
     - assets/search.png

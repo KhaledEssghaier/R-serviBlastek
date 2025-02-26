@@ -40,7 +40,7 @@ class _DefaultPageState extends State<DefaultPage>
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/welcaompage.jpg'), // Corrected image path
+            image: AssetImage('assets/welcampage.jpg'), // Corrected image path
             fit: BoxFit.cover,
           ),
         ),
@@ -117,11 +117,7 @@ class _DefaultPageState extends State<DefaultPage>
                       );
                       return;
                     } else {
-                      // Debug print statement
                       print('Login button pressed with email: $email');
-
-                      // Add actual login logic here
-                      // Simulate user login logic
                       if (email == 'test@example.com' &&
                           password == 'password') {
                         Navigator.push(
@@ -134,8 +130,6 @@ class _DefaultPageState extends State<DefaultPage>
                           SnackBar(content: Text('Invalid email or password')),
                         );
                       }
-
-
                     }
                   },
                   child: Text('Login'),

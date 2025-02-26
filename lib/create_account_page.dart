@@ -96,7 +96,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/welcaompage.jpg'),
+                image: AssetImage('assets/welcampage.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
