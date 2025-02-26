@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'dart:ui';
 import 'account_page.dart';
 import 'create_account_page.dart';
-import 'default_page.dart'; // Ensure this file exists
+import 'default_page.dart';
 import 'admin_login_page.dart';
 import 'admin_dashboard.dart';
 import 'user_profile_page.dart';
@@ -19,14 +19,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(), // Changed from DefaultPage() to MyHomePage()
+      home: DefaultPage(), // Set MyHomePage as the home screen
       routes: {
         '/account': (context) => AccountPage(),
         '/create_account': (context) => CreateAccountPage(),
         '/admin_login': (context) => AdminLoginPage(),
         '/admin_dashboard': (context) => AdminDashboard(),
-        '/user_profile': (context) =>
-            FullScreenProfilePage(email: 'user@example.com'),
+        '/user_profile': (context) => FullScreenProfilePage(email: 'user@example.com'),
       },
     );
   }
@@ -123,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                 ),
-                if (_currentIndex != _screens.length - 1) ...[
+                if (_currentIndex != _screens.length - 1) ...[ 
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
@@ -220,16 +219,14 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     TextButton.icon(
                       icon: Icon(Icons.image, color: Colors.blue),
-                      label:
-                          Text('Photo', style: TextStyle(color: Colors.black)),
+                      label: Text('Photo', style: TextStyle(color: Colors.black)),
                       onPressed: () {
                         // Handle photo upload
                       },
                     ),
                     TextButton.icon(
                       icon: Icon(Icons.videocam, color: Colors.green),
-                      label:
-                          Text('Video', style: TextStyle(color: Colors.black)),
+                      label: Text('Video', style: TextStyle(color: Colors.black)),
                       onPressed: () {
                         // Handle video upload
                       },
@@ -263,8 +260,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     // Main large image
                     ClipRRect(
-                      borderRadius:
-                          BorderRadius.vertical(top: Radius.circular(15.0)),
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
                       child: Image.asset(
                         'assets/shop1.jpg',
                         height: 200,
